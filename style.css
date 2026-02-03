@@ -1,0 +1,538 @@
+/* Paleta de Cores Equipe Carcará: 
+   Azul: #081695 | Verde: #91e601 | Cinza: #dbdbdb | Branco: #ffffff 
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /* Deixa o deslize entre abas suave */
+}
+
+body {
+    background-color: #dbdbdb; /* Fundo cinza suave */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Barra de Navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #081695; /* Azul Carcará */
+    color: white;
+    padding: 15px 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #91e601; /* Destaque em Verde */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #91e601;
+}
+
+.nav-cart {
+    cursor: pointer;
+    background: #ffffff; /* Botão do carrinho em verde */
+    color: #081695;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Seções Gerais */
+.section {
+    padding: 100px 20px 60px;
+    max-width: 1100px;
+    margin: 20px auto;
+    text-align: center;
+    background: white; /* Conteúdo principal em branco */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #081695;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #dbdbdb;
+    margin: 10px auto;
+    max-width: 80%;
+}
+
+/* Sobre Nós & Carrossel */
+.sobre-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.sobre-texto {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.carousel {
+    flex: 1;
+    min-width: 300px;
+    aspect-ratio: 3 / 2; /* Mantém a proporção da sua foto 6000x4000 */
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 4px solid #081695;
+    background: #081695; /* Se sobrar algum pixel, ele será azul e não branco */
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    /* Mudamos de volta para 'cover' para eliminar as bordas laterais */
+    object-fit: cover; 
+    object-position: center; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-img.active {
+    opacity: 1;
+}
+
+/* Grid de Produtos */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #dbdbdb;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    border-color: #91e601;
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Mostra o produto 3D inteiro sem cortes */
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    color: #081695;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    background: #081695;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.product-card button:hover {
+    background: #91e601;
+    color: #081695;
+}
+
+/* Seção Contato */
+#contato p {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+/* Modal do Carrinho */
+#cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 22, 149, 0.8); /* Fundo azul transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.cart-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#cart-items {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.btn-whatsapp {
+    background: #25d366; /* Cor oficial do WhatsApp */
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.btn-close {
+    background: #dbdbdb;
+    color: #081695;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Ajustes Mobile */
+@media (max-width: 600px) {
+    .nav-links {
+        gap: 10px;
+        font-size: 0.85rem;
+    }
+    .section {
+        padding: 80px 15px 40px;
+    }
+}
+
+.conquistas {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f8f9fa; /* Um cinza bem clarinho para destacar o bloco */
+    border-left: 5px solid #91e601; /* Detalhe em verde Carcará */
+    border-radius: 5px;
+}
+
+.conquistas h3 {
+    color: #081695; /* Título em Azul */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.conquistas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.conquistas li {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.section {
+    padding: 40px 20px; /* Reduzimos ainda mais o respiro */
+    max-width: 1100px;
+    margin: 0 auto 20px; /* Remove margem superior da caixa branca */
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    display: block; /* Garante que não haja comportamento de centralização vertical inesperado */
+}
+
+.section h2 {
+    color: #081695;
+    margin: 0 0 20px 0; /* Zera absolutamente a margem superior do título */
+    padding-top: 0;
+    text-transform: uppercase;
+}
+
+.sobre-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start; /* Alinha o conteúdo ao topo da seção */
+    justify-content: center;
+    margin-top: 10px; /* Espaço pequeno apenas entre o título H2 e o conteúdo */
+}
+
+body {
+    padding-top: 80px; /* Ajuste isso conforme a altura da sua navbar */
+    background-color: #dbdbdb;
+}
+
+.carousel-produtos-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+}
+
+.produtos-window {
+    overflow: hidden; /* Esconde os produtos que estão fora da vista */
+    width: 100%;
+}
+
+.products-grid {
+    display: flex; /* Muda de grid para flex para alinhar lado a lado */
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    padding: 10px 5px;
+}
+
+.product-card {
+    min-width: calc(33.333% - 14px); /* Garante 3 produtos por vez (descontando o gap) */
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #dbdbdb;
+    flex-shrink: 0; /* Impede que o card esmague */
+}
+
+/* Botões de navegação */
+.prev, .next {
+    background-color: transparent;
+    color: #dbdbdb;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: transparent;
+    color: #081695;
+}
+
+/* Ajuste para Celular (Mostra apenas 1 produto por vez) */
+@media (max-width: 768px) {
+    .product-card {
+        min-width: calc(100% - 10px);
+    }
+}
+
+/* Container do carrinho precisa ser relativo para o X se basear nele */
+.cart-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    position: relative; /* Importante para o posicionamento do X */
+    border: 3px solid #081695;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Estilo do botão X */
+.close-x {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 30px; /* Tamanho do X */
+    font-weight: bold;
+    color: #081695; /* Azul Carcará */
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.close-x:hover {
+    color: #91e601; /* Muda para Verde Carcará ao passar o mouse */
+    transform: scale(1.1);
+}
+
+.contato-container {
+    display: flex;
+    flex-wrap: wrap; /* Garante que no celular um fique embaixo do outro */
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.contato-info, .contato-instagram {
+    flex: 1;
+    min-width: 280px; /* Evita que fiquem muito apertados */
+}
+
+/* Card do Instagram */
+.insta-box {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(45deg, #081695, #91e601); /* Mix das cores da equipe */
+    padding: 15px 25px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 15px 0;
+    transition: transform 0.3s;
+}
+
+.insta-box:hover {
+    transform: scale(1.05);
+}
+
+.insta-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.insta-handle {
+    font-size: 1.2rem;
+}
+
+.insta-text {
+    font-size: 0.9rem;
+    color: #666;
+    max-width: 300px;
+}
+
+/* Ajuste mobile: Centralizar tudo quando as colunas quebrarem */
+@media (max-width: 768px) {
+    .contato-container {
+        text-align: center;
+        justify-content: center;
+    }
+    .contato-info, .contato-instagram {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .insta-text {
+        margin: 0 auto;
+    }
+}
+
+.apoio-projeto {
+    background-color: #f0f4ff; /* Um azul bem clarinho para destacar */
+    border: 2px dashed #081695; /* Borda tracejada em azul Carcará */
+    padding: 20px;
+    border-radius: 15px;
+    margin: 0 auto 30px;
+    max-width: 85%;
+    line-height: 1.5;
+}
+
+.apoio-projeto p {
+    color: #081695;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.apoio-projeto strong {
+    color: #081695;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsividade para o texto não ficar muito apertado no celular */
+@media (max-width: 600px) {
+    .apoio-projeto {
+        max-width: 100%;
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+
+.nav-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre a imagem e o texto */
+}
+
+.logo-img {
+    height: 45px; /* Define um tamanho fixo para não quebrar a barra */
+    width: auto;  /* Mantém a proporção da imagem */
+    object-fit: contain;
+    border-radius: 5px; /* Opcional: arredonda levemente as bordas do logo */
+}
+
+.nav-logo-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* Garante que a navbar tenha altura suficiente para o logo */
+.navbar {
+    padding: 10px 5px;
+    height: 70px; /* Definir uma altura fixa ajuda a manter o padrão */
+}
