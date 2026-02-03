@@ -40,7 +40,7 @@ function toggleCart() {
 function checkout() {
     if (cart.length === 0) return alert("Seu carrinho está vazio!");
     
-    let message = "🤖 *Pedido Lojinha Carcará*\n\n";
+    let message = "*Pedido Lojinha Carcará*\n\n";
     cart.forEach(item => {
         message += `• ${item.name} - R$ ${item.price.toFixed(2)}\n`;
     });
