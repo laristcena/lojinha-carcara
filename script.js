@@ -2,9 +2,40 @@ let cart = [];
 const phone = "5579999401478";
 
 // Função Carrinho
-function addToCart(name, price) {
-    cart.push({ name, price });
+function addToCart(name, price, color, quantity = 1) {
+    if (!color || color === "Selecione uma cor") {
+        alert("Por favor, selecione uma cor!");
+        return;
+    }
+    for (let i = 0; i < quantity; i++) {
+        cart.push({ name, price, color });
+    }
     updateCart();
+}
+
+function selectColor(button) {
+    // Remove seleção anterior
+    document.querySelectorAll('.color-btn').forEach(btn => btn.classList.remove('selected'));
+    
+    // Marca o botão clicado como selecionado
+    button.classList.add('selected');
+    
+    // Atualiza o valor da cor selecionada (sem aparecer na tela)
+    const color = button.getAttribute('data-color');
+    document.getElementById('color-display-demon').value = color;
+}
+
+function increaseQuantity(button) {
+    const qtyDisplay = button.closest('.quantity-control').querySelector('.qty-display');
+    qtyDisplay.innerText = parseInt(qtyDisplay.innerText) + 1;
+}
+
+function decreaseQuantity(button) {
+    const qtyDisplay = button.closest('.quantity-control').querySelector('.qty-display');
+    const currentQty = parseInt(qtyDisplay.innerText);
+    if (currentQty > 1) {
+        qtyDisplay.innerText = currentQty - 1;
+    }
 }
 
 function removeFromCart(index) {
@@ -25,7 +56,7 @@ function updateCart() {
         cartItems.innerHTML += `
             <div class="cart-item">
                 <span>${item.name}</span>
-                <span>R$ ${item.price.toFixed(2)} <button onclick="removeFromCart(${index})" style="background:none; border:none; color:red; cursor:pointer;">❌</button></span>
+                <span>R$ ${item.price.toFixed(2)} <button onclick="removeFromCart(${index})" class= "remove-item-btn" ><img src="fotos/lixo_icone.png" alt="Remover" class = "icon-lixeira"></button></span>
             </div>`;
     });
 
@@ -40,11 +71,21 @@ function toggleCart() {
 function checkout() {
     if (cart.length === 0) return alert("Seu carrinho está vazio!");
     
-    let message = "*Pedido Lojinha Carcará*\n\n";
+    // Agrupa itens por nome e cor
+    const groupedItems = {};
     cart.forEach(item => {
-        message += `• ${item.name} - R$ ${item.price.toFixed(2)}\n`;
+        const key = `${item.name}|${item.color}`;
+        if (!groupedItems[key]) {
+            groupedItems[key] = { name: item.name, color: item.color, price: item.price, quantity: 0 };
+        }
+        groupedItems[key].quantity++;
     });
-    message += `\n*Total: R$ ${document.getElementById('cart-total').innerText}*`;
+    
+    let message = "*Pedido Lojinha Carcará*\n\n";
+    Object.values(groupedItems).forEach(item => {
+        message += `• ${item.name}\n   Cor: ${item.color}\n   Quantidade: ${item.quantity}x\n   Preço unitário: R$ ${item.price.toFixed(2)}\n   Subtotal: R$ ${(item.price * item.quantity).toFixed(2)}\n\n`;
+    });
+    message += `*Total: R$ ${document.getElementById('cart-total').innerText}*`;
     
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
 }
@@ -88,4 +129,9 @@ function moveSlide(direction) {
     // Calcula a porcentagem do deslocamento
     const offset = currentProductIndex * (100 / itemsPerPage);
     slider.style.transform = `translateX(-${offset}%)`;
+}
+function updateColor(selectElement) {
+    const selectedColor = selectElement.value;
+    const productCard = selectElement.closest('.product-card');
+    const addButton = productCard.querySelector('button');
 }

@@ -111,7 +111,7 @@ hr {
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    border: 4px solid #081695;
+    border: 3px solid #081695;
     background: #081695; /* Se sobrar algum pixel, ele será azul e não branco */
 }
 
@@ -181,6 +181,141 @@ hr {
 }
 
 .product-card button:hover {
+    background: #91e601;
+    color: #081695;
+}
+
+/* Seletor de Cores */
+.color-selector {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 8px 0 15px;
+}
+
+.color-label {
+    font-size: 0.85rem;
+    color: #081695;
+    margin: 0 0 8px 0;
+    font-weight: bold;
+}
+
+.color-btn {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    border: 3px solid #dbdbdb;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0 !important;
+}
+.color-preto {
+    background-color: #000000 !important;
+}
+
+.color-branco {
+    background-color: #ffffff !important;
+    border: 3px solid #333 !important;
+}
+.color-btn:hover {
+    transform: scale(1.15);
+    border-color: #081695;
+}
+
+.color-btn.selected {
+    border-color: #081695;
+    box-shadow: 0 0 8px rgba(8, 22, 149, 0.5);
+}
+
+.color-selected {
+    font-size: 0.8rem;
+    color: #081695;
+    margin: 8px 0;
+    font-weight: bold;
+    min-height: 16px;
+}
+
+/* Container Cor e Quantidade Lado a Lado */
+.color-qty-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.color-section,
+.qty-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divider {
+    width: 2px;
+    height: 70px;
+    background-color: #dbdbdb;
+}
+
+.quantity-label {
+    font-size: 0.85rem;
+    color: #081695;
+    margin: 0 0 8px 0;
+    font-weight: bold;
+}
+
+/* Controle de Quantidade */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+.qty-btn {
+    background: #081695;
+    color: white;
+    border: none;
+    width: 10px !important;
+    height: 5px !important;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background: #91e601;
+    color: #081695;
+}
+
+.qty-display {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #081695;
+    min-width: 25px;
+    text-align: center;
+}
+
+.btn-add-cart {
+    background: #081695;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-add-cart:hover {
     background: #91e601;
     color: #081695;
 }
@@ -413,7 +548,7 @@ body {
 }
 
 .close-x:hover {
-    color: #91e601; /* Muda para Verde Carcará ao passar o mouse */
+    color: #a52020; /* Muda para Verde Carcará ao passar o mouse */
     transform: scale(1.1);
 }
 
@@ -572,4 +707,20 @@ body {
     .logo-img {
         height: 35px; /* Logo um pouco menor no celular */
     }
+}
+.icon-lixeira{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+.remove-item-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.remove-item-btn:hover {
+    opacity: 0.7;
 }

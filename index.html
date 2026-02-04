@@ -31,11 +31,37 @@
             <div class="produtos-window">
                 <div class="products-grid" id="products-slider">
                     
-                    <div class="product-card">
+                    <div class="product-card" id="card-demon-slayer">
                         <img src="fotos/ch_demon_slayer.png" alt="Chaveiro Demon Slayer">
                         <h3>Chaveiro Demon Slayer</h3>
-                        <p>R$ 5,00</p>
-                        <button onclick="addToCart('Chaveiro Demon Slayer', 5.00)">Adicionar</button>
+                        <p>Preço: R$ 5,00</p>
+                        
+                        <!-- Seleção de Cores e Quantidade -->
+                        <div class="color-qty-container">
+                            <div class="color-section">
+                                <p class="color-label">Cor:</p>
+                                <div class="color-selector">
+                                    <button class="color-btn color-preto" data-color="Preto" onclick="selectColor(this)" title="Preto"></button>
+                                    <button class="color-btn color-branco" data-color="Branco" onclick="selectColor(this)" title="Branco"></button>
+                                </div>
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            
+                            <div class="qty-section">
+                                <p class="quantity-label">Quantidade:</p>
+                                <div class="quantity-control">
+                                    <button class="qty-btn" onclick="decreaseQuantity(this)">−</button>
+                                    <span class="qty-display" id="qty-demon">1</span>
+                                    <button class="qty-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" id="color-display-demon" value="">
+                        
+                        <button class="btn-add-cart" onclick="addToCart('Chaveiro Demon Slayer', 5.00, document.getElementById('color-display-demon').value, parseInt(document.getElementById('qty-demon').innerText))">Adicionar ao Carrinho</button>
                     </div>
 
                     <div class="product-card">
