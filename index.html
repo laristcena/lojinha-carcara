@@ -48,76 +48,275 @@
                             
                             <div class="divider"></div>
                             
-                            
                             <div class="qty-section">
                                 <p class="quantity-label">Quantidade:</p>
                                 <div class="quantity-control">
                                     <button class="qty-btn" onclick="decreaseQuantity(this)">−</button>
-                                    <span class="qty-display" id="qty-demon">1</span>
+                                    <span class="qty-display">1</span>
                                     <button class="qty-btn" onclick="increaseQuantity(this)">+</button>
                                 </div>
                             </div>
                         </div>
                         
-                        <input type="hidden" id="color-display-demon" value="">
+                        <input type="hidden" class="color-display" value="">
                         
-                        <button class="btn-add-cart" onclick="addToCart('Chaveiro Demon Slayer', 5.00, document.getElementById('color-display-demon').value, parseInt(document.getElementById('qty-demon').innerText))">Adicionar ao Carrinho</button>
+                        <button class="btn-add-cart" onclick="addToCart('Chaveiro Demon Slayer', 5.00, this.closest('.product-card').querySelector('.color-display').value, parseInt(this.closest('.product-card').querySelector('.qty-display').innerText))">Adicionar ao Carrinho</button>
                     </div>
 
                     <div class="product-card">
                         <img src="fotos/mp_gato.png" alt="Marca página gato preto">
                         <h3>Marca página gato preto</h3>
-                        <p>R$ 10,00</p>
-                        <button onclick="addToCart('Marca página gato preto', 10.00)">Adicionar</button>
+                        <p>Preço: R$ 10,00</p>
+                        
+                        <!-- Seleção de Cores e Quantidade -->
+                        <div class="color-qty-container">
+                            <div class="color-section">
+                                <p class="color-label">Cor:</p>
+                                <div class="color-selector">
+                                    <button class="color-btn color-preto" data-color="Preto" onclick="selectColor(this)" title="Preto"></button>
+                                    <button class="color-btn color-branco" data-color="Branco" onclick="selectColor(this)" title="Branco"></button>
+                                </div>
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            <div class="qty-section">
+                                <p class="quantity-label">Quantidade:</p>
+                                <div class="quantity-control">
+                                    <button class="qty-btn" onclick="decreaseQuantity(this)">−</button>
+                                    <span class="qty-display">1</span>
+                                    <button class="qty-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" class="color-display" value="">
+                        
+                        <button class="btn-add-cart" onclick="addToCart('Marca página gato preto', 10.00, this.closest('.product-card').querySelector('.color-display').value, parseInt(this.closest('.product-card').querySelector('.qty-display').innerText))">Adicionar ao Carrinho</button>
                     </div>
 
                     <div class="product-card">
                         <img src="fotos/ch_batman.png" alt="Chaveiro Batman">
                         <h3>Chaveiro Batman</h3>
-                        <p>R$ 5,00</p>
-                        <button onclick="addToCart('Chaveiro Batman', 5.00)">Adicionar</button>
+                        <p>Preço: R$ 5,00</p>
+                        
+                        <!-- Seleção de Cores e Quantidade -->
+                        <div class="color-qty-container">
+                            <div class="color-section">
+                                <p class="color-label">Cor:</p>
+                                <div class="color-selector">
+                                    <button class="color-btn color-preto" data-color="Preto" onclick="selectColor(this)" title="Preto"></button>
+                                    <button class="color-btn color-branco" data-color="Branco" onclick="selectColor(this)" title="Branco"></button>
+                                </div>
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            <div class="qty-section">
+                                <p class="quantity-label">Quantidade:</p>
+                                <div class="quantity-control">
+                                    <button class="qty-btn" onclick="decreaseQuantity(this)">−</button>
+                                    <span class="qty-display">1</span>
+                                    <button class="qty-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" class="color-display" value="">
+                        
+                        <button class="btn-add-cart" onclick="addToCart('Chaveiro Batman', 5.00, this.closest('.product-card').querySelector('.color-display').value, parseInt(this.closest('.product-card').querySelector('.qty-display').innerText))">Adicionar ao Carrinho</button>
                     </div>
 
                     <div class="product-card">
                         <img src="fotos/ch_naruto_konoha.jpeg" alt="Chaveiro Konoha">
                         <h3>Chaveiro Konoha Naruto</h3>
-                        <p>R$ 5,00</p>
-                        <button onclick="addToCart('Chaveiro Konoha Naruto', 5.00)">Adicionar</button>
+                        <p>Preço: R$ 5,00</p>
+                        
+                        <!-- Seleção de Cores e Quantidade -->
+                        <div class="color-qty-container">
+                            <div class="color-section">
+                                <p class="color-label">Cor:</p>
+                                <div class="color-selector">
+                                    <button class="color-btn color-preto" data-color="Preto" onclick="selectColor(this)" title="Preto"></button>
+                                    <button class="color-btn color-branco" data-color="Branco" onclick="selectColor(this)" title="Branco"></button>
+                                </div>
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            <div class="qty-section">
+                                <p class="quantity-label">Quantidade:</p>
+                                <div class="quantity-control">
+                                    <button class="qty-btn" onclick="decreaseQuantity(this)">−</button>
+                                    <span class="qty-display">1</span>
+                                    <button class="qty-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" class="color-display" value="">
+                        
+                        <button class="btn-add-cart" onclick="addToCart('Chaveiro Konoha Naruto', 5.00, this.closest('.product-card').querySelector('.color-display').value, parseInt(this.closest('.product-card').querySelector('.qty-display').innerText))">Adicionar ao Carrinho</button>
                     </div>
 
                     <div class="product-card">
                         <img src="fotos/ch_letras.jpeg" alt="Chaveiro Letras">
                         <h3>Chaveiro Letras</h3>
-                        <p>R$ 5,00</p>
-                        <button onclick="addToCart('Chaveiro Letras', 5.00)">Adicionar</button>
+                        <p>Preço: R$ 5,00</p>
+                        
+                        <!-- Seleção de Cores e Quantidade -->
+                        <div class="color-qty-container">
+                            <div class="color-section">
+                                <p class="color-label">Cor:</p>
+                                <div class="color-selector">
+                                    <button class="color-btn color-preto" data-color="Preto" onclick="selectColor(this)" title="Preto"></button>
+                                    <button class="color-btn color-branco" data-color="Branco" onclick="selectColor(this)" title="Branco"></button>
+                                </div>
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            <div class="qty-section">
+                                <p class="quantity-label">Quantidade:</p>
+                                <div class="quantity-control">
+                                    <button class="qty-btn" onclick="decreaseQuantity(this)">−</button>
+                                    <span class="qty-display">1</span>
+                                    <button class="qty-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" class="color-display" value="">
+                        
+                        <button class="btn-add-cart" onclick="addToCart('Chaveiro Letras', 5.00, this.closest('.product-card').querySelector('.color-display').value, parseInt(this.closest('.product-card').querySelector('.qty-display').innerText))">Adicionar ao Carrinho</button>
                     </div>
 
                     <div class="product-card">
                         <img src="fotos/ch_cubone.jpeg" alt="Chaveiro Cubone">
                         <h3>Chaveiro Cubone Pokemon</h3>
-                        <p>R$ 5,00</p>
-                        <button onclick="addToCart('Chaveiro Cubone', 5.00)">Adicionar</button>
+                        <p>Preço: R$ 5,00</p>
+                        
+                        <!-- Seleção de Cores e Quantidade -->
+                        <div class="color-qty-container">
+                            <div class="color-section">
+                                <p class="color-label">Cor:</p>
+                                <div class="color-selector">
+                                    <button class="color-btn color-preto" data-color="Preto" onclick="selectColor(this)" title="Preto"></button>
+                                    <button class="color-btn color-branco" data-color="Branco" onclick="selectColor(this)" title="Branco"></button>
+                                </div>
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            <div class="qty-section">
+                                <p class="quantity-label">Quantidade:</p>
+                                <div class="quantity-control">
+                                    <button class="qty-btn" onclick="decreaseQuantity(this)">−</button>
+                                    <span class="qty-display">1</span>
+                                    <button class="qty-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" class="color-display" value="">
+                        
+                        <button class="btn-add-cart" onclick="addToCart('Chaveiro Cubone', 5.00, this.closest('.product-card').querySelector('.color-display').value, parseInt(this.closest('.product-card').querySelector('.qty-display').innerText))">Adicionar ao Carrinho</button>
                     </div>
 
                     <div class="product-card">
                         <img src="fotos/mp_harry_potter.png" alt="Marca Página Harry Potter">
                         <h3>Marca Página Harry Potter</h3>
-                        <p>R$ 10,00</p>
-                        <button onclick="addToCart('Marca Página Harry Potter', 10.00)">Adicionar</button>
+                        <p>Preço: R$ 10,00</p>
+                        
+                        <!-- Seleção de Cores e Quantidade -->
+                        <div class="color-qty-container">
+                            <div class="color-section">
+                                <p class="color-label">Cor:</p>
+                                <div class="color-selector">
+                                    <button class="color-btn color-preto" data-color="Preto" onclick="selectColor(this)" title="Preto"></button>
+                                    <button class="color-btn color-branco" data-color="Branco" onclick="selectColor(this)" title="Branco"></button>
+                                </div>
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            <div class="qty-section">
+                                <p class="quantity-label">Quantidade:</p>
+                                <div class="quantity-control">
+                                    <button class="qty-btn" onclick="decreaseQuantity(this)">−</button>
+                                    <span class="qty-display">1</span>
+                                    <button class="qty-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" class="color-display" value="">
+                        
+                        <button class="btn-add-cart" onclick="addToCart('Marca Página Harry Potter', 10.00, this.closest('.product-card').querySelector('.color-display').value, parseInt(this.closest('.product-card').querySelector('.qty-display').innerText))">Adicionar ao Carrinho</button>
                     </div>
 
                     <div class="product-card">
                         <img src="fotos/mp_harry_potter.png" alt="Chaveiro Creeper Minecraft">
                         <h3>Chaveiro Creeper Minecraft</h3>
-                        <p>R$ 5,00</p>
-                        <button onclick="addToCart('Chaveiro Creeper Minecraft', 5.00)">Adicionar</button>
+                        <p>Preço: R$ 5,00</p>
+                        
+                        <!-- Seleção de Cores e Quantidade -->
+                        <div class="color-qty-container">
+                            <div class="color-section">
+                                <p class="color-label">Cor:</p>
+                                <div class="color-selector">
+                                    <button class="color-btn color-preto" data-color="Preto" onclick="selectColor(this)" title="Preto"></button>
+                                    <button class="color-btn color-branco" data-color="Branco" onclick="selectColor(this)" title="Branco"></button>
+                                </div>
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            <div class="qty-section">
+                                <p class="quantity-label">Quantidade:</p>
+                                <div class="quantity-control">
+                                    <button class="qty-btn" onclick="decreaseQuantity(this)">−</button>
+                                    <span class="qty-display">1</span>
+                                    <button class="qty-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" class="color-display" value="">
+                        
+                        <button class="btn-add-cart" onclick="addToCart('Chaveiro Creeper Minecraft', 5.00, this.closest('.product-card').querySelector('.color-display').value, parseInt(this.closest('.product-card').querySelector('.qty-display').innerText))">Adicionar ao Carrinho</button>
                     </div>
 
                     <div class="product-card">
                         <img src="fotos/ch_aranha_sem_cor.png" alt="Chaveiro Homem-Aranha">
                         <h3>Chaveiro Homem-Aranha</h3>
-                        <p>R$ 5,00</p>
-                        <button onclick="addToCart('Chaveiro Homem-Aranha', 5.00)">Adicionar</button>
+                        <p>Preço: R$ 5,00</p>
+                        
+                        <!-- Seleção de Cores e Quantidade -->
+                        <div class="color-qty-container">
+                            <div class="color-section">
+                                <p class="color-label">Cor:</p>
+                                <div class="color-selector">
+                                    <button class="color-btn color-preto" data-color="Preto" onclick="selectColor(this)" title="Preto"></button>
+                                    <button class="color-btn color-branco" data-color="Branco" onclick="selectColor(this)" title="Branco"></button>
+                                </div>
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            <div class="qty-section">
+                                <p class="quantity-label">Quantidade:</p>
+                                <div class="quantity-control">
+                                    <button class="qty-btn" onclick="decreaseQuantity(this)">−</button>
+                                    <span class="qty-display">1</span>
+                                    <button class="qty-btn" onclick="increaseQuantity(this)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <input type="hidden" class="color-display" value="">
+                        
+                        <button class="btn-add-cart" onclick="addToCart('Chaveiro Homem-Aranha', 5.00, this.closest('.product-card').querySelector('.color-display').value, parseInt(this.closest('.product-card').querySelector('.qty-display').innerText))">Adicionar ao Carrinho</button>
                     </div>
                 </div>
             </div>
@@ -181,12 +380,7 @@
 
             <div class="contato-instagram">
                 <h3>Siga nosso progresso!</h3>
-                <a href="https://www.instagram.com/carcara.fll" target="_blank" class="insta-link">
-                    <div class="insta-box">
-                        <span class="insta-icon">📸</span>
-                        <span class="insta-handle">@carcara.fll</span>
-                    </div>
-                </a>
+                <iframe src="https://www.instagram.com/carcara.fll/embed" width="320" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
                 <p class="insta-text">Veja os bastidores, treinos e novidades da nossa equipe diretamente no feed.</p>
             </div>
         </div>
