@@ -370,7 +370,7 @@
         <h2>Contato</h2>
         <div class="contato-container">
             <div class="contato-info">
-                <p>Tem alguma dúvida ou quer encomendar algo especial?</p>
+                <h3>Tem alguma dúvida ou quer encomendar algo especial?</h3>
                 <p>📍 Colégio São Paulo - Aracaju/SE</p>
                 <p>📱 WhatsApp: (79) 99940-1478</p>
                 <div class="social-links">
@@ -380,7 +380,7 @@
 
             <div class="contato-instagram">
                 <h3>Siga nosso progresso!</h3>
-                <iframe src="https://www.instagram.com/carcara.fll/embed" width="320" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/carcara.fll/embed" width="250" height="320" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
                 <p class="insta-text">Veja os bastidores, treinos e novidades da nossa equipe diretamente no feed.</p>
             </div>
         </div>
@@ -392,12 +392,16 @@
             
             <h2>Seu Carrinho</h2>
             <ul id="cart-items"></ul>
+            <div class="delivery-options">
+                <p><strong>Forma de Entrega:</strong></p>
+                <label><input type="radio" name="delivery" value="Retirada no Colégio" checked> Retirada (Colégio São Paulo)</label><br>
+                <label><input type="radio" name="delivery" value="Solicitar Entrega"> Solicitar Entrega (Consultar Taxa)</label>
+            </div>
             <p><strong>Total: R$ <span id="cart-total">0.00</span></strong></p>
-            <button class="btn-whatsapp" onclick="checkout()">Finalizar no WhatsApp ✅</button>
+            <button class="btn-whatsapp" onclick="checkout()">Finalizar no WhatsApp</button>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-</html> 
-<!-- teste -->
+</html>
