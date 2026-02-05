@@ -54,12 +54,28 @@ function updateCart() {
     cartItems.innerHTML = "";
     let total = 0;
 
+    // Agrupa itens por nome e cor
+    const groupedItems = {};
     cart.forEach((item, index) => {
+        const key = `${item.name}|${item.color}`;
+        if (!groupedItems[key]) {
+            groupedItems[key] = { name: item.name, color: item.color, price: item.price, quantity: 0, indices: [] };
+        }
+        groupedItems[key].quantity++;
+        groupedItems[key].indices.push(index);
         total += item.price;
+    });
+
+    // Exibe itens agrupados
+    Object.values(groupedItems).forEach(group => {
+        const firstIndex = group.indices[0];
         cartItems.innerHTML += `
             <div class="cart-item">
-                <span>${item.name}</span>
-                <span>R$ ${item.price.toFixed(2)} <button onclick="removeFromCart(${index})" class= "remove-item-btn" ><img src="fotos/lixo_icone.png" alt="Remover" class = "icon-lixeira"></button></span>
+                <div class="item-info">
+                    <span class="item-name">${group.name} x${group.quantity}</span>
+                    <span class="item-color">Cor: ${group.color}</span>
+                </div>
+                <span class="item-price">R$ ${(group.price * group.quantity).toFixed(2)} <button onclick="removeFromCart(${firstIndex})" class="remove-item-btn"><img src="fotos/lixo_icone.png" alt="Remover" class="icon-lixeira"></button></span>
             </div>`;
     });
 
@@ -83,12 +99,13 @@ function checkout() {
         }
         groupedItems[key].quantity++;
     });
+    const deliveryMethod = document.querySelector('input[name="delivery"]:checked').value;
     
-    let message = "*Pedido Lojinha Carcará*\n\n";
+    let message = "*Pedido Lojinha Carcará*\n";
     Object.values(groupedItems).forEach(item => {
-        message += `• ${item.name}\n   Cor: ${item.color}\n   Quantidade: ${item.quantity}x\n   Preço unitário: R$ ${item.price.toFixed(2)}\n   Subtotal: R$ ${(item.price * item.quantity).toFixed(2)}\n\n`;
+        message += `\n• ${item.name}\n   Cor: ${item.color}\n   Quantidade: ${item.quantity}x\n   Preço unitário: R$ ${item.price.toFixed(2)}\n   Subtotal: R$ ${(item.price * item.quantity).toFixed(2)}\n   Forma de Entrega: ${deliveryMethod}\n`;
     });
-    message += `*Total: R$ ${document.getElementById('cart-total').innerText}*`;
+    message += `\n*Total: R$ ${document.getElementById('cart-total').innerText}*`;
     
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
 }

@@ -359,17 +359,44 @@ hr {
 
 #cart-items {
     list-style: none;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .cart-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #dbdbdb;
 }
 
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.item-name {
+    font-weight: bold;
+    color: #666;
+}
+
+.item-color {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.item-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item span:last-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .btn-whatsapp {
     background: #25d366; /* Cor oficial do WhatsApp */
     color: white;
@@ -397,9 +424,11 @@ hr {
 
 /* Ajustes Mobile */
 @media (max-width: 600px) {
-    .nav-links {
-        gap: 10px;
-        font-size: 0.85rem;
+    .nav-logo-text{
+        display: none;
+    }
+    .nav-links a {
+        font-size: 0;
     }
     .section {
         padding: 80px 15px 40px;
@@ -425,6 +454,7 @@ hr {
 .conquistas h3 {
     color: #081695; /* Título em Azul */
     font-size: 1.2rem;
+    
     margin-bottom: 10px;
     text-align: left;
 }
@@ -726,18 +756,49 @@ body {
     }
 }
 .icon-lixeira{
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     object-fit: contain;
+}
+
+/* Customização dos Radio Buttons de Forma de Entrega */
+.delivery-options {
+    /* margin: 20px 0 30px 0; */
+    padding: 15px 0;
+    /* border-top: 1px solid #dbdbdb; */
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 15px;
+}
+
+.delivery-options label {
+    display: flex;
+    align-items: center;
+    /* margin: 0px 0; */
+    cursor: pointer;
+}
+
+.delivery-options input[type="radio"] {
+    width: 13px;
+    height: 13px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #081695;
 }
 .remove-item-btn {
     background: none;
     border: none;
     cursor: pointer;
     padding: 5px;
+    margin-left: 10px;
+    vertical-align: middle;
     display: flex;
     align-items: center;
 }
 .remove-item-btn:hover {
     opacity: 0.7;
+}
+input [type="radio"]:checked {
+    border-color: #081695;
+    background-color: #081695;
+    box-shadow: inset 0 0 0 4px #fff; /* Cria o "ponto" branco interno */
 }
