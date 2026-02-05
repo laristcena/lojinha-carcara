@@ -103,9 +103,9 @@ function checkout() {
     
     let message = "*Pedido Lojinha Carcará*\n";
     Object.values(groupedItems).forEach(item => {
-        message += `\n• ${item.name}\n   Cor: ${item.color}\n   Quantidade: ${item.quantity}x\n   Preço unitário: R$ ${item.price.toFixed(2)}\n   Subtotal: R$ ${(item.price * item.quantity).toFixed(2)}\n   Forma de Entrega: ${deliveryMethod}\n`;
+        message += `\n• ${item.name}\n   Cor: ${item.color}\n   Quantidade: ${item.quantity}x\n   Preço unitário: R$ ${item.price.toFixed(2)}\n   Subtotal: R$ ${(item.price * item.quantity).toFixed(2)}\n`;
     });
-    message += `\n*Total: R$ ${document.getElementById('cart-total').innerText}*`;
+    message += `\nForma de Entrega: ${deliveryMethod}\n*Total: R$ ${document.getElementById('cart-total').innerText}*`;
     
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
 }
