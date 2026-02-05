@@ -423,7 +423,7 @@ hr {
 }
 
 /* Ajustes Mobile */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .nav-logo-text{
         display: none;
     }
@@ -433,7 +433,7 @@ hr {
     .section {
         padding: 80px 15px 40px;
     }
-}
+} */
 /* @media  screen and (max-width: 1024px) {
     .nav-links span {
         display: ;
@@ -552,11 +552,11 @@ body {
 }
 
 /* Ajuste para Celular (Mostra apenas 1 produto por vez) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .product-card {
         min-width: calc(100% - 10px);
     }
-}
+} */
 
 /* Container do carrinho precisa ser relativo para o X se basear nele */
 .cart-content {
@@ -648,7 +648,7 @@ body {
 }
 
 /* Ajuste mobile: Centralizar tudo quando as colunas quebrarem */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .contato-container {
         text-align: center;
         justify-content: center;
@@ -661,7 +661,7 @@ body {
     .insta-text {
         margin: 0 auto;
     }
-}
+} */
 
 .apoio-projeto {
     background-color: #f0f4ff; /* Um azul bem clarinho para destacar */
@@ -685,14 +685,6 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Responsividade para o texto não ficar muito apertado no celular */
-@media (max-width: 600px) {
-    .apoio-projeto {
-        max-width: 100%;
-        font-size: 0.9rem;
-        padding: 15px;
-    }
-}
 
 .nav-logo-container {
     display: flex;
@@ -742,7 +734,7 @@ body {
 }
 
 /* Ajuste para telas menores (Celulares) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .navbar {
         padding: 0 5%; /* No celular, usamos menos espaço lateral para caber tudo */
     }
@@ -754,7 +746,7 @@ body {
     .logo-img {
         height: 35px; /* Logo um pouco menor no celular */
     }
-}
+} */
 .icon-lixeira{
     width: 16px;
     height: 16px;
@@ -764,23 +756,27 @@ body {
 /* Customização dos Radio Buttons de Forma de Entrega */
 .delivery-options {
     /* margin: 20px 0 30px 0; */
-    padding: 15px 0;
+    padding: 10px 0;
     /* border-top: 1px solid #dbdbdb; */
     border-bottom: 1px solid #dbdbdb;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
 }
-
 .delivery-options label {
     display: flex;
     align-items: center;
-    /* margin: 0px 0; */
     cursor: pointer;
+    line-height: 1.3 !important;
+    gap: 0px;
+    margin-top: 4px !important;
 }
 
 .delivery-options input[type="radio"] {
     width: 13px;
     height: 13px;
-    margin-right: 10px;
+    margin-top: 1px;
+    margin-right: 8px;
     cursor: pointer;
     accent-color: #081695;
 }
@@ -801,4 +797,93 @@ input [type="radio"]:checked {
     border-color: #081695;
     background-color: #081695;
     box-shadow: inset 0 0 0 4px #fff; /* Cria o "ponto" branco interno */
+}
+/* TODA A LOGICA DE CELULARES AQUI */
+/* Responsividade para o texto não ficar muito apertado no celular */
+@media (max-width: 600px) {
+    .cart-item{
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        padding: 10px 0 !important;
+        gap: 10px !important;
+    }
+    .item-info {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: left !important;
+        flex: 1 !important;
+    }
+    .item-price {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        gap: 5px !important;
+        min-width: 80px !important;
+    }
+    .icon-lixeira{
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+    }
+    .remove-item-btn {
+        padding: 5px;
+        margin-left: 5px;
+    }
+    .apoio-projeto {
+        max-width: 100%;
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+    /* AJUSTES PRO CARROSEL DOS PRODUTOS */
+    .produtos-window {
+        overflow: auto !important;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* Melhora o scroll em dispositivos móveis */
+        padding: 10px 0;
+        /* width: 100%; */
+    }    
+    .products-grid {
+        display: flex; /* Muda de grid para flex para alinhar lado a lado */
+        gap: 15px;
+        transition: transform 0.5s ease-in-out;
+        padding: 10px 5px;
+    }
+    .product-card{
+        min-width: 85% !important; 
+        scroll-snap-align: center;
+        flex-shrink: 0; /* Impede que o card esmague */
+        margin: 0 auto; /* Centraliza o card dentro do container de rolagem */
+    }
+    .prev, .next {
+        display: none;
+    } /* Esconde os botões de navegação no celular */
+     .contato-container {
+        text-align: center;
+        justify-content: center;
+    }
+    .contato-info, .contato-instagram {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .insta-text {
+        margin: 0 auto;
+    }
+     .product-card {
+        min-width: calc(100% - 10px);
+    }
+    .nav-logo-text{
+        display: none;
+    }
+    .nav-links a {
+        font-size: 0;
+    }
+    .section {
+        padding-top: 20px !important;
+        margin-top: 2px;
+    }
+    body{
+        padding-top: 75px !important; /* Ajuste isso conforme a altura da sua navbar */
+    }
 }
