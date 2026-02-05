@@ -1,52 +1,71 @@
-🦅 Lojinha Carcará — Equipe de Robótica
-<p align="center"> <img src="fotos/carcara_logo_1.png" alt="Logo Equipe Carcará" width="200"> </p>
+# 🦅 Lojinha Carcará — Equipe de Robótica
 
-<p align="center"> <strong>Frente de arrecadação oficial para as temporadas de FIRST LEGO League (FLL) e OBR.</strong> </p>
+<p align="center">
+  <img src="fotos/carcara_logo_1.png" alt="Logo Equipe Carcará" width="100">
+</p>
 
-<p align="center"> <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-green" alt="Status"> <img src="https://img.shields.io/badge/Tecnologias-HTML%20%7C%20CSS%20%7C%20JS-blue" alt="Tecnologias">
+<p align="center">
+  <strong>Plataforma oficial de arrecadação para as temporadas de FIRST LEGO League (FLL) e OBR.</strong>
+</p>
 
-📝 Sobre o Projeto
-O site da Lojinha Carcará foi desenvolvido para facilitar a venda de produtos personalizados (chaveiros, marca-páginas 3D). Todo o valor arrecadado é revertido para o financiamento de viagens, inscrições em torneios e aquisição de sensores de última geração para os robôs da equipe.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-green" alt="Status">
+  <img src="https://img.shields.io/badge/Tecnologias-HTML%20%7C%20CSS%20%7C%20JS-blue" alt="Tecnologias">
+  <img src="https://img.shields.io/badge/Escola-Col%C3%A9gio%20S%C3%A3o%20Paulo-081695" alt="Escola">
+</p>
 
-🚀 Funcionalidades
-Catálogo Interativo: Carrossel responsivo com exibição de fotos dos produtos em 3D.
+---
 
-Seleção Customizada: Sistema de escolha de cores e controle de quantidade por item.
+## 📝 **SOBRE O PROJETO**
+> O site da **Lojinha Carcará** foi desenvolvido para facilitar a venda de produtos personalizados, como chaveiros e marca-páginas 3D. Todo o valor arrecadado é revertido diretamente para o financiamento de viagens, inscrições em torneios e aquisição de equipamentos para os robôs da equipe.
 
-Carrinho Dinâmico: Gerenciamento de itens em tempo real com cálculo automático de valores.
+---
 
-Integração WhatsApp: Finalização do pedido com geração automática de mensagem formatada via API.
+## 🚀 **FUNCIONALIDADES PRINCIPAIS**
 
-UX Mobile: Design totalmente adaptado para compras via smartphone com navegação por toque.
+### 🛒 **CATÁLOGO INTERATIVO**
+* Exibição dinâmica de produtos com **carrossel responsivo** e fotos detalhadas.
 
-🛠️ Tecnologias Utilizadas
-HTML5: Estruturação semântica.
+### 🎨 **SELEÇÃO CUSTOMIZADA**
+* Escolha de **cores e ajuste de quantidade** diretamente no card do produto.
 
-CSS3: Estilização baseada na identidade visual (Azul #081695 e Verde #91e601) com uso de Flexbox e Media Queries.
+### 📊 **CARRINHO EM TEMPO REAL**
+* Gerenciamento de itens com **cálculo automático** do total e integração de opções de entrega.
 
-JavaScript (Vanilla): Lógica do carrinho, manipulação do DOM e Intersection Observer para carregamento dinâmico.
+### 📱 **INTEGRAÇÃO COM WHATSAPP**
+* Finalização de pedidos via API, gerando **mensagens formatadas automaticamente** para o vendedor.
 
-🏆 Conquistas da Equipe
-Representamos Aracaju/SE em grandes competições. Nossas vitórias na temporada 25/26 (Regional Salvador/BA):
+### ⚡ **DESIGN MOBILE-FIRST**
+* Interface otimizada para **navegação por toque** e carregamento rápido em dispositivos móveis.
 
-🥉 3º Lugar Champions Award.
+---
 
-🥇 1º Lugar Desempenho do Robô.
+## 🛠️ **TECNOLOGIAS UTILIZADAS**
 
-🥇 1º Lugar Desafio do Robô.
+* `HTML5`: Estruturação semântica e acessível.
+* `CSS3`: Estilização baseada na identidade visual da equipe (**Azul #081695** e **Verde #91e601**).
+* `JavaScript (Vanilla)`: Lógica do carrinho, manipulação do DOM e uso de *Intersection Observer*.
 
-✈️ Classificados para o Torneio Nacional.
+---
 
-📦 Como rodar o projeto
-Clone este repositório:
+## 🏆 **CONQUISTAS DA EQUIPE**
+> Representamos **Aracaju/SE** com orgulho! Confira nossos resultados na Regional Salvador/BA (Temporada 25/26):
 
-Bash
-git clone https://github.com/laristcena/lojinha-carcara.git
-Abra o arquivo index.html em seu navegador ou use a extensão Live Server no VS Code.
+* 🥉 **3º Lugar Champions Award**
+* 🥇 **1º Lugar Desempenho do Robô**
+* 🥇 **1º Lugar Desafio do Robô**
+* ✈️ **Classificados para o Torneio Nacional**
 
-👥 Desenvolvedores
-Projeto desenvolvido com foco em aprendizado prático de Sistemas de Informação:
+---
 
-Larissa Cena — GitHub
+## 👥 **DESENVOLVEDORES**
+**Projeto acadêmico e prático desenvolvido por:**
 
-Thyago Lins — GitHub
+* 👤 **Larissa Cena** — [GitHub](https://github.com/laristcena)
+* 👤 **Thyago Lins** — [GitHub](https://github.com/thyagolins)
+
+---
+
+<p align="center">
+  <em>"Transformando o futuro através da robótica e da programação." 🦅</em>
+</p>
