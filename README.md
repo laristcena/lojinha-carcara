@@ -11,7 +11,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-green" alt="Status">
   <img src="https://img.shields.io/badge/Tecnologias-HTML%20%7C%20CSS%20%7C%20JS-blue" alt="Tecnologias">
-  <img src="https://img.shields.io/badge/Escola-Col%C3%A9gio%20S%C3%A3o%20Paulo-081695" alt="Escola">
 </p>
 
 ---
