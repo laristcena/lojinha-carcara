@@ -1,39 +1,52 @@
-🦅 Lojinha Carcará - Equipe de Robótica
-Este é o site oficial da Lojinha Carcará, a frente de arrecadação da equipe de robótica do Colégio São Paulo (Aracaju/SE). O objetivo da plataforma é facilitar a venda de produtos personalizados para financiar a participação da equipe em competições como a FIRST LEGO League (FLL) e a Olimpíada Brasileira de Robótica (OBR).
+🦅 Lojinha Carcará — Equipe de Robótica
+<p align="center"> <img src="fotos/carcara_logo_1.png" alt="Logo Equipe Carcará" width="200"> </p>
+
+<p align="center"> <strong>Frente de arrecadação oficial para as temporadas de FIRST LEGO League (FLL) e OBR.</strong> </p>
+
+<p align="center"> <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-green" alt="Status"> <img src="https://img.shields.io/badge/Tecnologias-HTML%20%7C%20CSS%20%7C%20JS-blue" alt="Tecnologias"> <img src="https://img.shields.io/badge/Escola-Col%C3%A9gio%20S%C3%A3o%20Paulo-081695" alt="Escola"> </p>
+
+📝 Sobre o Projeto
+O site da Lojinha Carcará foi desenvolvido para facilitar a venda de produtos personalizados (chaveiros, marca-páginas 3D). Todo o valor arrecadado é revertido para o financiamento de viagens, inscrições em torneios e aquisição de sensores de última geração para os robôs da equipe.
 
 🚀 Funcionalidades
-Catálogo Interativo: Exibição de produtos (chaveiros, marca-páginas) com carrossel responsivo.
+Catálogo Interativo: Carrossel responsivo com exibição de fotos dos produtos em 3D.
 
-Seleção Customizada: Escolha de cores e quantidades diretamente no card do produto.
+Seleção Customizada: Sistema de escolha de cores e controle de quantidade por item.
 
-Carrinho Dinâmico: Gerenciamento de itens em tempo real com cálculo automático de total.
+Carrinho Dinâmico: Gerenciamento de itens em tempo real com cálculo automático de valores.
 
-Integração com WhatsApp: Finalização do pedido gerando uma mensagem formatada automaticamente para o vendedor.
+Integração WhatsApp: Finalização do pedido com geração automática de mensagem formatada via API.
 
-Design Responsivo: Adaptado para dispositivos móveis e desktops.
+UX Mobile: Design totalmente adaptado para compras via smartphone com navegação por toque.
 
 🛠️ Tecnologias Utilizadas
-HTML5: Estruturação semântica do conteúdo.
+HTML5: Estruturação semântica.
 
-CSS3: Estilização baseada na identidade visual da equipe (Azul #081695 e Verde #91e601).
+CSS3: Estilização baseada na identidade visual (Azul #081695 e Verde #91e601) com uso de Flexbox e Media Queries.
 
-JavaScript (Vanilla): Lógica do carrinho, carrossel de fotos e integração com a API do WhatsApp.
+JavaScript (Vanilla): Lógica do carrinho, manipulação do DOM e Intersection Observer para carregamento dinâmico.
 
-🏆 Sobre a Equipe
-A Equipe Carcará foi fundada em 6 de agosto de 2024. Algumas de nossas conquistas recentes incluem:
+🏆 Conquistas da Equipe
+Representamos Aracaju/SE em grandes competições. Nossas vitórias na temporada 25/26 (Regional Salvador/BA):
 
-3º Lugar Champions Award - FLL 25/26 (Salvador/BA).
-1º Lugar Desempenho do Robô - FLL 25/26.
-Classificação para o Torneio Nacional de Robótica.
+🥉 3º Lugar Champions Award.
 
-📦 Como rodar o projeto localmente
+🥇 1º Lugar Desempenho do Robô.
+
+🥇 1º Lugar Desafio do Robô.
+
+✈️ Classificados para o Torneio Nacional.
+
+📦 Como rodar o projeto
 Clone este repositório:
 
 Bash
-git clone https://github.com/seu-usuario/lojinha-carcara.git
-Navegue até a pasta do projeto.
+git clone https://github.com/laristcena/lojinha-carcara.git
+Abra o arquivo index.html em seu navegador ou use a extensão Live Server no VS Code.
 
-Abra o arquivo index.html em seu navegador.
+👥 Desenvolvedores
+Projeto desenvolvido com foco em aprendizado prático de Sistemas de Informação:
 
-📄 Licença
-Este projeto é de uso exclusivo da Equipe Carcará. Sinta-se à vontade para usar a estrutura como inspiração para outros projetos educacionais de robótica.
+Larissa Cena — GitHub
+
+Thyago Lins — GitHub
