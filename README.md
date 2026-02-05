@@ -3,7 +3,7 @@
 
 <p align="center"> <strong>Frente de arrecadação oficial para as temporadas de FIRST LEGO League (FLL) e OBR.</strong> </p>
 
-<p align="center"> <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-green" alt="Status"> <img src="https://img.shields.io/badge/Tecnologias-HTML%20%7C%20CSS%20%7C%20JS-blue" alt="Tecnologias"> <img src="https://img.shields.io/badge/Escola-Col%C3%A9gio%20S%C3%A3o%20Paulo-081695" alt="Escola"> </p>
+<p align="center"> <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-green" alt="Status"> <img src="https://img.shields.io/badge/Tecnologias-HTML%20%7C%20CSS%20%7C%20JS-blue" alt="Tecnologias">
 
 📝 Sobre o Projeto
 O site da Lojinha Carcará foi desenvolvido para facilitar a venda de produtos personalizados (chaveiros, marca-páginas 3D). Todo o valor arrecadado é revertido para o financiamento de viagens, inscrições em torneios e aquisição de sensores de última geração para os robôs da equipe.
