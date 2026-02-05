@@ -405,6 +405,14 @@ hr {
         padding: 80px 15px 40px;
     }
 }
+/* @media  screen and (max-width: 1024px) {
+    .nav-links span {
+        display: ;
+    }
+    .navbar{
+        justify-content: space-between;
+    }
+} */
 
 .conquistas {
     margin-top: 25px;
@@ -556,15 +564,24 @@ body {
     display: flex;
     flex-wrap: wrap; /* Garante que no celular um fique embaixo do outro */
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     gap: 40px;
     margin-top: 20px;
     text-align: left;
 }
 
 .contato-info, .contato-instagram {
-    flex: 1;
+    /* antes era só flex:1 e min-width:280px */
+    flex: 1 1 calc(50% - 20px);
     min-width: 280px; /* Evita que fiquem muito apertados */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px solid #dbdbdb;
+    box-sizing: border-box;
 }
 
 /* Card do Instagram */
@@ -654,7 +671,7 @@ body {
 }
 
 .logo-img {
-    height: 45px; /* Define um tamanho fixo para não quebrar a barra */
+    height: 35px; /* Define um tamanho fixo para não quebrar a barra */
     width: auto;  /* Mantém a proporção da imagem */
     object-fit: contain;
     border-radius: 5px; /* Opcional: arredonda levemente as bordas do logo */
