@@ -732,21 +732,6 @@ body {
     /* Garante que o padding não "empurre" a largura para fora da tela */
     box-sizing: border-box; 
 }
-
-/* Ajuste para telas menores (Celulares) */
-/* @media (max-width: 768px) {
-    .navbar {
-        padding: 0 5%; /* No celular, usamos menos espaço lateral para caber tudo */
-    }
-    
-    .nav-logo-text {
-        font-size: 1rem; /* Diminui um pouco o texto no celular */
-    }
-    
-    .logo-img {
-        height: 35px; /* Logo um pouco menor no celular */
-    }
-} */
 .icon-lixeira{
     width: 16px;
     height: 16px;
@@ -819,7 +804,7 @@ input [type="radio"]:checked {
         flex-direction: column !important;
         align-items: flex-end !important;
         gap: 5px !important;
-        min-width: 80px !important;
+        min-width: 80px;
     }
     .icon-lixeira{
         width: 18px;
@@ -886,4 +871,67 @@ input [type="radio"]:checked {
     body{
         padding-top: 75px !important; /* Ajuste isso conforme a altura da sua navbar */
     }
+}
+
+/* teste campo de whatsapp */
+
+/* Container da Caixa de Mensagem */
+.whatsapp-message-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #dbdbdb;
+}
+
+.whatsapp-message-box label {
+    font-weight: bold;
+    color: #081695;
+    font-size: 0.9rem;
+}
+
+#whatsapp-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #dbdbdb;
+    font-family: inherit;
+    resize: none; /* Impede o usuário de deformar a caixa */
+    transition: border-color 0.3s;
+}
+
+#whatsapp-input:focus {
+    outline: none;
+    border-color: #91e601; /* Verde Carcará ao focar */
+}
+
+/* Botão de Envio de Mensagem */
+.btn-whatsapp-send {
+    background: #25d366;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-whatsapp-send:hover {
+    background: #128c7e;
+    transform: scale(1.02);
+}
+
+.direct-chat {
+    margin-top: 20px;
+    font-size: 0.85rem;
+}
+
+.link-whatsapp-direct {
+    color: #25d366;
+    text-decoration: none;
+    font-weight: bold;
 }

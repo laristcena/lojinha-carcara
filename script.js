@@ -155,3 +155,19 @@ function updateColor(selectElement) {
     const productCard = selectElement.closest('.product-card');
     const addButton = productCard.querySelector('button');
 }
+// teste do campo de whatsapp
+function sendWhatsAppMessage() {
+    const input = document.getElementById('whatsapp-input');
+    const message = input.value;
+    const phoneNumber = "5579999401478"; // Número da equipe
+
+    if (message.trim() === "") {
+        alert("Por favor, digite uma mensagem antes de enviar!");
+        return;
+    }
+
+    const encodedMessage = encodeURIComponent(message);
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    window.open(url, '_blank');
+}

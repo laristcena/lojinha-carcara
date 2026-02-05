@@ -319,6 +319,7 @@
                         <button class="btn-add-cart" onclick="addToCart('Chaveiro Homem-Aranha', 5.00, this.closest('.product-card').querySelector('.color-display').value, parseInt(this.closest('.product-card').querySelector('.qty-display').innerText))">Adicionar ao Carrinho</button>
                     </div>
                 </div>
+                
             </div>
 
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
@@ -373,11 +374,22 @@
                 <h3>Tem alguma dúvida ou quer encomendar algo especial?</h3>
                 <p>📍 Colégio São Paulo - Aracaju/SE</p>
                 <p>📱 WhatsApp: (79) 99940-1478</p>
-                <div class="social-links">
-                    <a href="https://wa.me/5579999401478" target="_blank" class="btn-whatsapp">Falar no WhatsApp</a>
+                
+               <div class="whatsapp-message-box">
+                    <label for="whatsapp-input">✉️ Envie sua mensagem:</label>
+                    <textarea 
+                        id="whatsapp-input" 
+                        placeholder="Olá! Gostaria de saber mais sobre os chaveiros..."
+                        rows="4"
+                    ></textarea>
+                    <button class="btn-whatsapp-send" onclick="sendWhatsAppMessage()">Enviar no WhatsApp</button>
+                </div>
+            
+                <div class="direct-chat">
+                    <p>Ou clique para conversar diretamente:</p>
+                    <a href="https://wa.me/5579999401478" target="_blank" class="link-whatsapp-direct">Abrir Chat Vazio</a>
                 </div>
             </div>
-
             <div class="contato-instagram">
                 <h3>Siga nosso progresso!</h3>
                 <iframe src="https://www.instagram.com/carcara.fll/embed" width="250" height="320" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
