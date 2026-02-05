@@ -62,7 +62,7 @@
 **Projeto acadêmico e prático desenvolvido por:**
 
 * 👤 **Larissa Cena** — [GitHub](https://github.com/laristcena)
-* 👤 **Thyago Lins** — [GitHub](https://github.com/thyagolins)
+* 👤 **Thyago Lins** — [GitHub](https://github.com/thyago39)
 
 ---
 
